@@ -1,0 +1,68 @@
+# =============================================================================
+# GRA-Unified: Docker Compose for AION-Ω
+# =============================================================================
+# Usage:
+#   docker-compose up              # Start AION-Ω
+#   docker-compose down            # Stop AION-Ω
+#   docker-compose build           # Rebuild image
+#
+# Extend with:
+#   - Databases (PostgreSQL, Redis, etc.)
+#   - Message queues (RabbitMQ, Kafka)
+#   - Monitoring (Prometheus, Grafana)
+# =============================================================================
+
+version: "3.9"
+
+services:
+
+  # ---------------------------------------------------------------------------
+  # AION-Ω Core Service
+  # ---------------------------------------------------------------------------
+  gra-aion:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: aion-omega
+    image: gra-unified/aion-omega:latest
+    volumes:
+      # Mount the entire repo for live development
+      - .:/app
+      # Cache pip packages for faster rebuilds
+      - pip_cache:/root/.cache/pip
+    environment:
+      - PYTHONUNBUFFERED=1
+      - GRA_ENV=development
+      # Add your API keys or config here
+      # - OPENAI_API_KEY=${OPENAI_API_KEY}
+    working_dir: /app
+    command: ["python", "apps/main.py"]
+    # Interactive mode for debugging
+    stdin_open: true
+    tty: true
+    # Uncomment to expose ports if AION-Ω serves an API
+    # ports:
+    #   - "8000:8000"
+
+  # ---------------------------------------------------------------------------
+  # Optional: Jupyter Lab for experimentation
+  # ---------------------------------------------------------------------------
+  # gra-jupyter:
+  #   build:
+  #     context: .
+  #     dockerfile: docker/Dockerfile
+  #   container_name: aion-jupyter
+  #   image: gra-unified/aion-jupyter:latest
+  #   volumes:
+  #     - .:/app
+  #     - pip_cache:/root/.cache/pip
+  #   ports:
+  #     - "8888:8888"
+  #   working_dir: /app
+  #   command: ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--allow-root", "--no-browser"]
+  #   environment:
+  #     - PYTHONUNBUFFERED=1
+
+volumes:
+  pip_cache:
+    driver: local

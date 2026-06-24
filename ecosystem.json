@@ -1,0 +1,74 @@
+{
+  "ecosystem_version": "aion-omega-1.0",
+  "description": "GRA-Unified ecosystem version manifest. Pins module versions for reproducible AION-Ω deployments.",
+  "last_updated": "2026-01-01T00:00:00Z",
+  "modules": {
+    "core": {
+      "GRA-Core-Unified-Hierarchical-Stability-Library": "v2.1.3",
+      "GRA-Meta-Nulling-Repo": "v1.5.0",
+      "GRA-Meta-Nulling-Foundations": "v1.2.0",
+      "GRA-Transfinite-Core": "v0.9.0",
+      "GRA-Nexus-Core": "v1.0.0",
+      "GRA-Quantum-Observer": "v0.8.0"
+    },
+    "stability": {
+      "GRA-Hierarchical-Stability": "v3.0.0",
+      "Hierarchical-Stability-Rank-N": "v2.0.0",
+      "ALL-IN-BIT-The-Foamless-Landscape-of-Optimal-Rank-N": "v1.0.0"
+    },
+    "resonance": {
+      "GRA-X-Unified-General-Resonance-Architecture": "v2.0.0",
+      "GRA-Resonance-Nullification-Series": "v1.4.0",
+      "GRA-Chiral-Nullification-Math": "v1.3.0",
+      "hybrid-resonant-ai": "v1.1.0"
+    },
+    "swarm": {
+      "GRA-LLM-Swarm-Constructs": "v1.8.0",
+      "GRA-Swarm-Optimization": "v2.1.0",
+      "GRA-Swarm-Subject": "v1.0.0",
+      "GRA-Genius-Swarm": "v0.9.0",
+      "GRA-Swarm-Engine": "v1.5.0",
+      "gra_swarm_asi": "v0.7.0",
+      "Love-Swarm-Nullification-Enhanced-": "v1.0.0",
+      "GRA-Health-Swarm": "v0.5.0"
+    },
+    "multiverse": {
+      "GRA-Multiverse-Final": "v9.0.0",
+      "GRA-Multiverse-Optimizer": "v3.2.0",
+      "GRA-Multiverse-Post-Singularity": "v1.0.0"
+    },
+    "biology": {
+      "GRA-Living-Vaccine-Architecture": "v1.0.0",
+      "GRA-Aging-Reset": "v0.6.0",
+      "GRA-CellTwin-Final": "v1.0.0",
+      "GRA-Drug-Discovery": "v0.4.0",
+      "GRA_Longevity": "v0.8.0"
+    },
+    "philosophy": {
+      "GRA-Love-Oriented-Nullification": "v1.0.0",
+      "GRA-SubjectSwap": "v1.2.0",
+      "GRA-InterSubjectivity-Layer": "v0.9.0",
+      "GRA-Eternal-Consciousness": "v0.5.0",
+      "metaethics-hybrid-algorithm-with-code": "v1.0.0"
+    },
+    "applications": {
+      "GRA-Hormonal-Explosion-Of-Subject": "v1.0.0",
+      "GRA-ASI-Metric-Space": "v0.8.0",
+      "gra-orchestra": "v1.3.0",
+      "bayesian-gra-ramanujan": "v1.0.0",
+      "gra-quantum-poetry": "v0.3.0",
+      "GRA-Nulling-Cinema": "v0.2.0"
+    },
+    "hardware": {
+      "Drone-War-Distributed-GRA": "v1.0.0",
+      "GRA-Physical-AI": "v0.4.0",
+      "GRA-ASI-HW-Co-Processor": "v0.3.0",
+      "GRA_DroneSwarm": "v0.6.0"
+    }
+  },
+  "compatibility": {
+    "python": ">=3.10",
+    "os": ["linux", "macos", "windows"],
+    "docker_engine": ">=24.0"
+  }
+}

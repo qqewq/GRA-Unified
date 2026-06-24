@@ -1,0 +1,73 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gra-unified"
+version = "1.0.0"
+description = "GRA-Unified: General Resonance Architecture — Unified Meta-Package"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Oleg Bitsoev", email = "qqewq@github"}
+]
+keywords = [
+    "GRA", "resonance", "nullification", "swarm", "multiverse",
+    "artificial-intelligence", "ASI", "AGI", "stability", "metaphysics"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+# Minimal dependencies — users install what they need.
+# Core dependencies (uncomment as needed):
+dependencies = [
+    # "numpy>=1.24",
+    # "scipy>=1.10",
+    # "pydantic>=2.0",
+    # "torch>=2.0",
+    # "sympy>=1.12",
+]
+
+[project.optional-dependencies]
+# Full AION-Ω stack
+full = [
+    "numpy",
+    "scipy",
+    "pydantic",
+    "torch",
+    "sympy",
+    "networkx",
+    "matplotlib",
+]
+
+# Dev tools
+dev = [
+    "pytest>=7.0",
+    "black>=23.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/qqewq/GRA-Unified"
+Repository = "https://github.com/qqewq/GRA-Unified"
+Documentation = "https://github.com/qqewq/GRA-Unified/docs"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+packages = ["gra"]
+
+[tool.setuptools.package-data]
+gra = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
